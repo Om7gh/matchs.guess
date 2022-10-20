@@ -1,0 +1,166 @@
+@use "variable" as *;
+
+.container {
+  height: 100vh;
+  width: 100%;
+  background: no-repeat url("../images/main.jpg");
+  background-size: cover;
+  position: relative;
+  @media screen and (max-width: 574px) {
+    width: 100%;
+  }
+
+  .navbar {
+    width: 90%;
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    padding: 3rem;
+    border-radius: 1rem;
+    @media screen and (max-width: 574px) {
+      width: 100%;
+      padding: 0rem;
+    }
+
+    .logo {
+      h1 {
+        @media screen and (max-width: 574px) {
+          font-size: 2rem;
+          width: 100%;
+        }
+        color: $mainColor;
+        font: {
+          size: 2.5rem;
+          weight: 800;
+        }
+      }
+    }
+    .conn {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 5rem;
+      @media screen and (max-width: 574px) {
+        gap: 2rem;
+      }
+      button {
+        @media screen and (max-width: 574px) {
+          padding: 0.4rem;
+        }
+        padding: 0.8rem 2rem;
+        font-size: 1.5rem;
+        border: none;
+        border-radius: 1rem;
+        cursor: pointer;
+      }
+      .log {
+        background-color: $mainColor;
+
+        a {
+          @media screen and (max-width: 574px) {
+            font-size: 1.3rem;
+          }
+          color: $secondColor;
+          font: {
+            size: 1.5rem;
+            weight: 700;
+          }
+        }
+      }
+      .reg {
+        background-color: $secondColor;
+        a {
+          @media screen and (max-width: 574px) {
+            font-size: 1.3rem;
+          }
+          font: {
+            size: 1.5rem;
+            weight: 700;
+          }
+          color: $mainColor;
+        }
+      }
+    }
+  }
+
+  form {
+    background-color: $mainColor;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 2rem;
+    border: 1px solid $mainColor;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    @media screen and (max-width: 750px) {
+      width: 80%;
+    }
+
+    .title {
+      margin-top: -2rem;
+
+      font: {
+        size: 2.5rem;
+        weight: 700;
+      }
+      color: $black;
+    }
+    .inputs {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: flex-end;
+      label {
+        font: {
+          size: 1.3rem;
+          weight: 800;
+        }
+        color: $secondColor;
+      }
+      input,
+      button {
+        width: 20rem;
+        background: $mainColor;
+        border: none;
+        outline: none;
+        border-radius: 1rem;
+        padding: 0.5rem 1.2rem;
+        box-shadow: 0px 0px 10px inset rgba(0, 0, 0, 0.1),
+          0px 0px 15px inset rgba(0, 0, 0, 0.2);
+      }
+      button[type="submit"] {
+        cursor: pointer;
+        margin-top: 1rem;
+        background-color: $white;
+        color: $secondColor;
+        font: {
+          size: 1.5rem;
+          weight: 800;
+        }
+        a {
+          color: $secondColor;
+        }
+      }
+    }
+    .footer {
+      p {
+        color: $black;
+        font: {
+          size: 1.2rem;
+          weight: 700;
+        }
+      }
+      a {
+        color: $secondColor;
+      }
+    }
+  }
+}

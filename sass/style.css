@@ -1,0 +1,955 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300;400;500;600;700;800;900&family=Oxygen:wght@300;400;700&display=swap");
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans Arabic", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+html {
+  font-size: 10px;
+}
+
+button {
+  outline: none;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  background: no-repeat url("../images/main.jpg");
+  background-size: cover;
+  position: relative;
+}
+@media screen and (max-width: 574px) {
+  .container {
+    width: 100%;
+  }
+}
+.container .navbar {
+  width: 90%;
+  height: 15vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  padding: 3rem;
+  border-radius: 1rem;
+}
+@media screen and (max-width: 574px) {
+  .container .navbar {
+    width: 100%;
+    padding: 0rem;
+  }
+}
+.container .navbar .logo h1 {
+  color: #c6e2ff;
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+@media screen and (max-width: 574px) {
+  .container .navbar .logo h1 {
+    font-size: 2rem;
+    width: 100%;
+  }
+}
+.container .navbar .conn {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+@media screen and (max-width: 574px) {
+  .container .navbar .conn {
+    gap: 2rem;
+  }
+}
+.container .navbar .conn button {
+  padding: 0.8rem 2rem;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+@media screen and (max-width: 574px) {
+  .container .navbar .conn button {
+    padding: 0.4rem;
+  }
+}
+.container .navbar .conn .log {
+  background-color: #c6e2ff;
+}
+.container .navbar .conn .log a {
+  color: #003366;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+@media screen and (max-width: 574px) {
+  .container .navbar .conn .log a {
+    font-size: 1.3rem;
+  }
+}
+.container .navbar .conn .reg {
+  background-color: #003366;
+}
+.container .navbar .conn .reg a {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #c6e2ff;
+}
+@media screen and (max-width: 574px) {
+  .container .navbar .conn .reg a {
+    font-size: 1.3rem;
+  }
+}
+.container form {
+  background-color: #c6e2ff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 2rem;
+  border: 1px solid #c6e2ff;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+@media screen and (max-width: 750px) {
+  .container form {
+    width: 80%;
+  }
+}
+.container form .title {
+  margin-top: -2rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #222;
+}
+.container form .inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-end;
+}
+.container form .inputs label {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #003366;
+}
+.container form .inputs input,
+.container form .inputs button {
+  width: 20rem;
+  background: #c6e2ff;
+  border: none;
+  outline: none;
+  border-radius: 1rem;
+  padding: 0.5rem 1.2rem;
+  box-shadow: 0px 0px 10px inset rgba(0, 0, 0, 0.1), 0px 0px 15px inset rgba(0, 0, 0, 0.2);
+}
+.container form .inputs button[type=submit] {
+  cursor: pointer;
+  margin-top: 1rem;
+  background-color: #eee;
+  color: #003366;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+.container form .inputs button[type=submit] a {
+  color: #003366;
+}
+.container form .footer p {
+  color: #222;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.container form .footer a {
+  color: #003366;
+}
+
+.box {
+  background: linear-gradient(to bottom right, #c6e2ff, #003366);
+  height: 100vh;
+  overflow: hidden;
+}
+@media screen and (max-width: 760px) {
+  .box {
+    overflow-y: hidden;
+  }
+}
+.box .navbar {
+  display: flex;
+  height: 10vh;
+  width: 90%;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+.box .navbar ul {
+  display: flex;
+  gap: 3rem;
+}
+@media screen and (max-width: 760px) {
+  .box .navbar ul {
+    transition: 0.2s ease;
+    visibility: hidden;
+    position: absolute;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    -webkit-backdrop-filter: blur(30px);
+            backdrop-filter: blur(30px);
+    z-index: 10;
+  }
+}
+.box .navbar ul li a {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #003366;
+}
+@media screen and (max-width: 574px) {
+  .box .navbar ul li a {
+    font-size: 2rem;
+    font-weight: 900;
+  }
+}
+.box .navbar .profil .avatar {
+  cursor: pointer;
+  height: 5rem;
+  width: 5rem;
+  border: 5px double #c6e2ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box .navbar .profil .avatar span {
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 900;
+  font-family: "Oxygen", sans-serif;
+  color: #003366;
+}
+.box .navbar .logo {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #222;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.box .navbar .logo .menu {
+  display: none;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 0.3rem;
+}
+.box .navbar .logo .menu span {
+  width: 15px;
+  height: 5px;
+  background: #003366;
+}
+.box .navbar .profil-info {
+  transition: 0.1s linear;
+  transform: scale(0);
+  position: absolute;
+  right: 1%;
+  top: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  background-color: #eee;
+  border: 1px solid #eee;
+  height: 15rem;
+  width: 15rem;
+  border-radius: 1.5rem;
+}
+.box .navbar .profil-info button {
+  background-color: #c6e2ff;
+  border-radius: 1rem;
+  padding: 0.5rem 1.2rem;
+  border: none;
+}
+.box .navbar .profil-info button a {
+  color: #003366;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+.box .navbar .show {
+  transform: scale(1);
+}
+.box .hero {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  width: 50%;
+}
+@media screen and (max-width: 760px) {
+  .box .hero {
+    width: 90%;
+    top: 40%;
+  }
+}
+.box .hero .intro h1 {
+  color: #222;
+  font-size: 4rem;
+  font-weight: 800;
+}
+@media screen and (max-width: 760px) {
+  .box .hero .intro h1 {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 760px) {
+  .box .hero .middle {
+    width: 100%;
+  }
+}
+.box .hero .middle p {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #222;
+}
+@media screen and (max-width: 760px) {
+  .box .hero .middle p {
+    text-align: center;
+  }
+}
+.box .hero .end button {
+  width: 20rem;
+  padding: 0.3rem 1rem;
+  border-radius: 1rem;
+  border: none;
+}
+.box .hero .end button a {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #003366;
+}
+
+.match {
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #c6e2ff;
+  width: 50%;
+  margin: 7rem auto;
+}
+@media screen and (max-width: 760px) {
+  .match {
+    width: 95%;
+  }
+}
+.match .match-intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #eee;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+@media screen and (max-width: 760px) {
+  .match .match-intro {
+    text-align: center;
+    padding: 0rem;
+  }
+}
+.match .match-intro h2 {
+  order: 1;
+  color: #222;
+}
+@media screen and (max-width: 760px) {
+  .match .match-intro h2 {
+    text-align: center;
+  }
+  .match .match-intro h2 span {
+    font: 1.4rem;
+  }
+}
+.match .match-intro h2 span {
+  color: #003366;
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+@media screen and (max-width: 760px) {
+  .match .match-intro h2 span {
+    text-align: center;
+    font-size: 1.4rem;
+  }
+}
+@media screen and (max-width: 760px) {
+  .match .match-intro h2 span {
+    font-size: 1.4rem;
+  }
+}
+.match .match-intro h3 {
+  color: #222;
+  font-size: 1.6rem;
+}
+@media screen and (max-width: 760px) {
+  .match .match-intro h3 {
+    text-align: right;
+    font-size: 1.4rem;
+  }
+}
+.match .match-intro h3 span {
+  color: #003366;
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+@media screen and (max-width: 760px) {
+  .match .match-intro h3 span {
+    font-size: 1.4rem;
+  }
+}
+.match .match-logo {
+  border-radius: 1rem;
+  padding: 1rem;
+  background: #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 760px) {
+  .match .match-logo {
+    justify-content: center;
+    gap: 0.2rem;
+  }
+}
+.match .match-logo .equipe {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.match .match-logo .equipe img {
+  width: 10rem;
+  border-radius: 1rem;
+}
+@media screen and (max-width: 760px) {
+  .match .match-logo .equipe img {
+    width: 5rem;
+  }
+}
+.match .match-logo .equipe p {
+  color: #222;
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+@media screen and (max-width: 760px) {
+  .match .match-logo .equipe p {
+    font-size: 1.2rem;
+  }
+}
+.match .guess button {
+  padding: 0.5rem 1rem;
+  width: 15rem;
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+  color: #003366;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+@media screen and (max-width: 760px) {
+  .match .guess button {
+    width: 10rem;
+  }
+}
+
+.box .ads {
+  opacity: 0.8;
+  height: 50rem;
+  width: 20rem;
+  background-color: white;
+  position: fixed;
+  left: 5%;
+  top: 60%;
+  transform: translate(-5%, -60%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+}
+@media screen and (max-width: 760px) {
+  .box .ads {
+    display: none;
+  }
+}
+.box .ads .title h1 {
+  color: #003366;
+}
+.box .ads2 {
+  left: 82%;
+}
+
+.guess-box {
+  visibility: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 30rem;
+  width: 30rem;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  border-radius: 2rem;
+}
+.guess-box .guess-canal {
+  display: flex;
+  align-items: center;
+}
+.guess-box .guess-canal label {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #003366;
+}
+.guess-box .guess-canal input {
+  width: 50px;
+  border: none;
+  padding: 0.3rem 0.8rem;
+  outline: none;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #222;
+}
+.guess-box button {
+  width: 60%;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+  background-color: #003366;
+  color: #eee;
+  font-size: 1.6rem;
+  font-weight: 900;
+}
+
+.match-logo {
+  border-radius: 1rem;
+  padding: 1rem;
+  background: #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.match-logo .equipe {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.match-logo .equipe img {
+  width: 10rem;
+  border-radius: 1rem;
+}
+@media screen and (max-width: 760px) {
+  .match-logo .equipe img {
+    width: 5rem;
+  }
+}
+.match-logo .equipe p {
+  color: #222;
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+@media screen and (max-width: 760px) {
+  .match-logo .equipe p {
+    font-size: 1.2rem;
+  }
+}
+
+.guess-logo {
+  width: 50%;
+  margin: 5rem auto;
+}
+@media screen and (max-width: 760px) {
+  .guess-logo {
+    width: 95%;
+  }
+}
+.guess-logo .result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.guess-logo .result .show-results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.guess-logo .result .show-results .span-result {
+  font-size: 2rem;
+}
+.guess-logo .result .show-results .span-result span {
+  color: #222;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.guess-logo .result .user-guess {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 1rem;
+  align-items: center;
+  color: black;
+  font-size: 2rem;
+  font-weight: 900;
+}
+.guess-logo .result .user-guess span {
+  color: #003366;
+}
+
+@media screen and (max-width: 760px) {
+  html {
+    overflow: hidden;
+  }
+}
+
+.box-admin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #c6e2ff, #eee);
+}
+@media screen and (max-width: 760px) {
+  .box-admin {
+    width: 95%;
+  }
+}
+.box-admin nav {
+  direction: rtl;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  padding: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+.box-admin nav .logo {
+  color: #003366;
+  font-size: 3rem;
+  font-weight: 800;
+}
+.box-admin .box1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+@media screen and (max-width: 760px) {
+  .box-admin .box1 {
+    flex-direction: column;
+  }
+}
+.box-admin .box1 .box-admin-edit {
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  transition: 0.2s linear;
+  height: 30rem;
+  width: 30rem;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 10px #003366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box-admin .box1 .box-admin-edit a {
+  color: #003366;
+  font-size: 3rem;
+  font-weight: 600;
+}
+.box-admin .box1 .box-admin-edit:hover {
+  scale: 0.98;
+  box-shadow: 0px 0px 10px inset #222;
+}
+
+body {
+  background: linear-gradient(to right, #c6e2ff, #eee);
+}
+
+.box-edit {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.box-edit .form-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.box-edit .form-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background: #003366;
+  width: 400px;
+  height: 350px;
+  padding: 1.2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+}
+@media screen and (max-width: 760px) {
+  .box-edit .form-box form {
+    width: 300px;
+    padding: 1rem;
+  }
+}
+.box-edit .form-box form h2 {
+  color: #eee;
+  font-size: 2rem;
+  font-weight: 900;
+}
+.box-edit .form-box form input,
+.box-edit .form-box form button {
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+  outline: none;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.output table {
+  width: 70vw;
+  text-align: center;
+  margin-bottom: 2rem;
+  background-color: #003366;
+}
+@media screen and (max-width: 760px) {
+  .output table {
+    width: 30vw;
+  }
+}
+.output table tr {
+  border: 2px solid #eee;
+}
+.output table th {
+  border: 2px solid #eee;
+  padding: 2rem;
+  color: #5bb;
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+@media screen and (max-width: 760px) {
+  .output table th {
+    padding: 0.2rem;
+  }
+}
+.output table td {
+  border: 2px solid #eee;
+  padding: 2rem;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+@media screen and (max-width: 760px) {
+  .output table td {
+    padding: 0.2rem;
+    font-size: 1.2rem;
+  }
+  .output table td img {
+    width: 50px;
+  }
+}
+.output table td .logo-equipe {
+  width: 10rem;
+  border-radius: 1rem;
+}
+.output table form button {
+  color: #eee;
+  cursor: pointer;
+  background: #333;
+  padding: 0.8rem 2rem;
+  border: none;
+  outline: none;
+  border-radius: 1rem;
+  width: 100px;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.profil-info button {
+  padding: 5px 15px;
+  border-radius: 1rem;
+  border: none;
+  outline: none;
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+@media screen and (max-width: 760px) {
+  .profil-info button {
+    padding: 2px 9px;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+}
+
+.profil-info button a {
+  color: #222;
+}
+
+@media screen and (max-width: 574px) {
+  .box-admin {
+    width: 90%;
+  }
+}
+
+#form {
+  width: 30%;
+  background-color: #003366;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 2rem;
+  border: 1px solid #003366;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+@media screen and (max-width: 760px) {
+  #form {
+    width: 80%;
+  }
+}
+#form .title {
+  margin-top: -2rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #eee;
+}
+#form .inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-end;
+}
+#form .inputs label {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #c6e2ff;
+}
+#form .inputs input,
+#form .inputs button {
+  color: #eee;
+  width: 20rem;
+  background: #003366;
+  border: none;
+  outline: none;
+  border-radius: 1rem;
+  padding: 0.5rem 1.2rem;
+  box-shadow: 0px 0px 10px inset rgba(0, 0, 0, 0.1), 0px 0px 15px inset rgba(0, 0, 0, 0.2);
+}
+#form .inputs button[type=submit] {
+  cursor: pointer;
+  margin-top: 1rem;
+  background-color: #eee;
+  color: #003366;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+#form .inputs button[type=submit] a {
+  color: #003366;
+}
+#form .show-form {
+  visibility: visible;
+}
+
+.box-admin #add-form {
+  background: #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  height: 300px;
+  width: 350px;
+}
+.box-admin #add-form h2 {
+  color: #003366;
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+.box-admin #add-form input[type=text] {
+  color: #003366;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  background: none;
+  border: none;
+  outline: none;
+  box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.2);
+  width: 60%;
+}
+.box-admin #add-form input[type=text]:focus, .box-admin #add-form button:focus {
+  border: 1px solid #003366;
+  box-shadow: 0px 0px 5px #003366;
+}
+.box-admin #add-form div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.box-admin #add-form div label {
+  color: #003366;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.box-admin #add-form button {
+  width: 60%;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  border: none;
+  outline: none;
+  color: #222;
+  box-shadow: 0px 0px 10px inset rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 800;
+}/*# sourceMappingURL=style.css.map */

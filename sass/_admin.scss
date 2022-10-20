@@ -1,0 +1,344 @@
+@use "variable" as *;
+@use "reset";
+html {
+  @media screen and (max-width: 760px) {
+    overflow: hidden;
+  }
+}
+.box-admin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, $mainColor, $white);
+  @media screen and (max-width: 760px) {
+    width: 95%;
+  }
+
+  nav {
+    direction: rtl;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    padding: 3rem;
+    display: flex;
+    justify-content: space-between;
+    .logo {
+      color: $secondColor;
+      font: {
+        size: 3rem;
+        weight: 800;
+      }
+    }
+  }
+
+  .box1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    @media screen and (max-width: 760px) {
+      flex-direction: column;
+    }
+
+    .box-admin-edit {
+      backdrop-filter: blur(5px);
+      transition: 0.2s linear;
+      height: 30rem;
+      width: 30rem;
+      border-radius: 1rem;
+      box-shadow: 0px 0px 10px $secondColor;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      a {
+        color: $secondColor;
+        font: {
+          size: 3rem;
+          weight: 600;
+        }
+      }
+    }
+    .box-admin-edit:hover {
+      scale: 0.98;
+      box-shadow: 0px 0px 10px inset $black;
+    }
+  }
+}
+body {
+  background: linear-gradient(to right, $mainColor, $white);
+}
+
+.box-edit {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  .form-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    form {
+      @media screen and (max-width: 760px) {
+        width: 300px;
+        padding: 1rem;
+      }
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      background: $secondColor;
+      width: 400px;
+      height: 350px;
+      padding: 1.2rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      border-radius: 1rem;
+      h2 {
+        color: $white;
+        font: {
+          size: 2rem;
+          weight: 900;
+        }
+      }
+      input,
+      button {
+        padding: 0.5rem 1rem;
+        border-radius: 1rem;
+        box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+        outline: none;
+        border: none;
+        font: {
+          size: 1.5rem;
+          weight: 800;
+        }
+      }
+    }
+  }
+}
+.output {
+  table {
+    @media screen and (max-width: 760px) {
+      width: 30vw;
+    }
+    width: 70vw;
+    text-align: center;
+    margin-bottom: 2rem;
+    background-color: $secondColor;
+    tr {
+      border: 2px solid $white;
+    }
+    th {
+      @media screen and (max-width: 760px) {
+        padding: 0.2rem;
+      }
+      border: 2px solid $white;
+      padding: 2rem;
+      color: #5bb;
+      font-size: 1.6rem;
+      font-weight: 800;
+    }
+    td {
+      @media screen and (max-width: 760px) {
+        padding: 0.2rem;
+        img {
+          width: 50px;
+        }
+        font-size: 1.2rem;
+      }
+      border: 2px solid $white;
+      padding: 2rem;
+      color: white;
+      font-size: 1.4rem;
+      font-weight: 800;
+      .logo-equipe {
+        width: 10rem;
+        border-radius: 1rem;
+      }
+    }
+    form {
+      button {
+        color: #eee;
+        cursor: pointer;
+        background: #333;
+        padding: 0.8rem 2rem;
+        border: none;
+        outline: none;
+        border-radius: 1rem;
+        width: 100px;
+        font: {
+          size: 1.5rem;
+          weight: 900;
+        }
+      }
+    }
+  }
+}
+
+.profil-info {
+  button {
+    @media screen and (max-width: 760px) {
+      padding: 2px 9px;
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+    padding: 5px 15px;
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+    font: {
+      size: 1.4rem;
+      weight: 800;
+    }
+  }
+}
+.profil-info button a {
+  color: $black;
+}
+
+.box-admin {
+  @media screen and (max-width: 574px) {
+    width: 90%;
+  }
+}
+
+#form {
+  width: 30%;
+  background-color: $secondColor;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 2rem;
+  border: 1px solid $secondColor;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  @media screen and (max-width: 760px) {
+    width: 80%;
+  }
+
+  .title {
+    margin-top: -2rem;
+
+    font: {
+      size: 2.5rem;
+      weight: 700;
+    }
+    color: $white;
+  }
+  .inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-end;
+    label {
+      font: {
+        size: 1.3rem;
+        weight: 800;
+      }
+      color: $mainColor;
+    }
+    input,
+    button {
+      color: $white;
+      width: 20rem;
+      background: $secondColor;
+      border: none;
+      outline: none;
+      border-radius: 1rem;
+      padding: 0.5rem 1.2rem;
+      box-shadow: 0px 0px 10px inset rgba(0, 0, 0, 0.1),
+        0px 0px 15px inset rgba(0, 0, 0, 0.2);
+    }
+    button[type="submit"] {
+      cursor: pointer;
+      margin-top: 1rem;
+      background-color: $white;
+      color: $secondColor;
+      font: {
+        size: 1.5rem;
+        weight: 800;
+      }
+      a {
+        color: $secondColor;
+      }
+    }
+  }
+  .show-form {
+    visibility: visible;
+  }
+}
+
+.box-admin {
+  #add-form {
+    background: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    height: 300px;
+    width: 350px;
+    h2 {
+      color: $secondColor;
+      font: {
+        size: 1.8rem;
+        weight: 800;
+      }
+    }
+    input[type = text] {
+      color: $secondColor;
+      padding: 1rem 2rem;
+      border-radius: .5rem;
+      background: none;
+      border: none;
+      outline: none;
+      box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.2);
+      width: 60%;
+    }input[type = text]:focus, button:focus {
+      border: 1px solid $secondColor;
+      box-shadow: 0px 0px 5px $secondColor;
+    }
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: .5rem;
+      label {
+        color: $secondColor;
+        font: {
+          size: 1.5rem;
+          weight: 600;
+        }
+      }
+    }
+    button {
+      width: 60%;
+      padding: 1rem 2rem;
+      border-radius: 1rem;
+      border: none;
+      outline: none;
+      color: $black;
+      box-shadow: 0px 0px 10px inset rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      font: {
+        size: 1.5rem;
+        weight: 800;
+      }
+    }
+
+  }
+}

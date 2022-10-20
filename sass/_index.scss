@@ -1,0 +1,181 @@
+@use "variable" as *;
+.box {
+  background: linear-gradient(to bottom right, $mainColor, $secondColor);
+  height: 100vh;
+  overflow: hidden;
+  @media screen and (max-width: 760px) {
+    overflow-y: hidden;
+  }
+  .navbar {
+    display: flex;
+    height: 10vh;
+    width: 90%;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    ul {
+      @media screen and (max-width: 760px) {
+        transition: 0.2s ease;
+        visibility: hidden;
+        position: absolute;
+        height: 100%;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        backdrop-filter: blur(30px);
+        z-index: 10;
+      }
+      display: flex;
+      gap: 3rem;
+      li {
+        a {
+          @media screen and (max-width: 574px) {
+            font-size: 2rem;
+            font-weight: 900;
+          }
+          font: {
+            size: 1.6rem;
+            weight: 700;
+          }
+          color: $secondColor;
+        }
+      }
+    }
+    .profil {
+      .avatar {
+        cursor: pointer;
+        height: 5rem;
+        width: 5rem;
+        border: 5px double $mainColor;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        span {
+          text-transform: uppercase;
+          font: {
+            size: 3rem;
+            weight: 900;
+            family: "Oxygen", sans-serif;
+          }
+          color: $secondColor;
+        }
+      }
+    }
+    .logo {
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: $black;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      .menu {
+        display: none;
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 0.3rem;
+        span {
+          width: 15px;
+          height: 5px;
+          background: $secondColor;
+        }
+      }
+    }
+    .profil-info {
+      transition: 0.1s linear;
+      transform: scale(0);
+      position: absolute;
+      right: 1%;
+      top: 10%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      background-color: $white;
+      border: 1px solid $white;
+      height: 15rem;
+      width: 15rem;
+      border-radius: 1.5rem;
+      button {
+        background-color: $mainColor;
+        border-radius: 1rem;
+        padding: 0.5rem 1.2rem;
+        border: none;
+        a {
+          color: $secondColor;
+          font: {
+            size: 1.4rem;
+            weight: 700;
+          }
+        }
+      }
+    }
+    .show {
+      transform: scale(1);
+    }
+  }
+
+  .hero {
+    @media screen and (max-width: 760px) {
+      width: 90%;
+      top: 40%;
+    }
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    width: 50%;
+    .intro {
+      h1 {
+        @media screen and (max-width: 760px) {
+          text-align: center;
+        }
+        color: $black;
+        font: {
+          size: 4rem;
+          weight: 800;
+        }
+      }
+    }
+    .middle {
+      @media screen and (max-width: 760px) {
+        width: 100%;
+      }
+      p {
+        @media screen and (max-width: 760px) {
+          text-align: center;
+        }
+        font: {
+          size: 2rem;
+          weight: 500;
+        }
+        color: $black;
+      }
+    }
+    .end {
+      button {
+        width: 20rem;
+        padding: 0.3rem 1rem;
+        border-radius: 1rem;
+        border: none;
+        a {
+          font: {
+            size: 1.4rem;
+            weight: 800;
+          }
+          color: $secondColor;
+        }
+      }
+    }
+  }
+}

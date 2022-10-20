@@ -1,0 +1,82 @@
+@use "reset";
+@use "variable" as *;
+
+.match-logo {
+ 
+    border-radius: 1rem;
+    padding: 1rem;
+    background: $white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .equipe {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      img {
+        @media screen and (max-width: 760px) {
+          width: 5rem;
+        }
+        width: 10rem;
+        border-radius: 1rem;
+      }
+      p {
+        color: $black;
+        @media screen and (max-width: 760px) {
+          font-size: 1.2rem;
+        }
+        font: {
+          size: 1.4rem;
+          weight: 800;
+        }
+      }
+    }
+  }
+
+  .guess-logo {
+    @media screen and (max-width: 760px) {
+      width: 95%;
+    }
+    width: 50%;
+    margin:5rem auto;
+
+    .result {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .show-results {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .span-result {
+                font: {
+                    size: 2rem;
+                }
+                span {
+                    color: $black;
+                    font: {
+                        size: 2rem;
+                        weight: 700;
+                    }
+                }
+            }
+            
+        }
+        .user-guess {
+            display: flex;
+            flex-direction: row-reverse;
+            gap: 1rem;
+            align-items: center;
+            color: black;
+            font: {
+                size: 2rem;
+                weight: 900;
+            }
+            span {
+                color: $secondColor;
+            }
+        }
+    }
+  }
